@@ -1,0 +1,193 @@
+1.
+
+class Test
+{
+    public static void main (String[] args)
+    {
+        try
+        {
+            int a = 0;
+            System.out.println (a);
+            int b = 20 / a;
+            System.out.println (b);
+        }
+ 
+        catch(ArithmeticException e)
+        {
+            System.out.println ("Hi");
+        }
+ 
+        finally
+        {
+            System.out.println ("Hello");
+        }
+    }
+}
+ 
+
+[2.0 points]
+
+ 
+ ans: 0 Hi Hello
+
+
+2.
+
+class Test extends Exception { }
+  
+class Program{
+   public static void main(String args[]) { 
+      try {
+         throw new Test();
+      }
+      catch(Test t) {
+         System.out.println("Got the Test Exception");
+      }
+      finally {
+         System.out.println("Inside finally block");
+      }
+  }
+}
+ 
+
+[2.0 points]
+
+ 
+ ans: Got the Test Exception Inside finally block
+
+3.
+
+class Test{
+   public static void main(String args[]) {
+      try {
+         throw 1+10;
+      }
+      catch(int e) {
+         System.out.println("Got the  Exception " + e);
+      }
+  }
+}
+ 
+
+[2.0 points]
+
+ 
+ ans: Compile Time Error
+
+4.
+
+String s = "hello";
+String s2 = new String(new StringBuffer(s).toUpperCase().reverse());
+System.out.println("s2");
+ 
+
+[2.0 points]
+
+ ans: OLLEH
+ 
+5.
+
+What will be the output?
+
+class Test{
+  public static void main(String[] args){
+    try{ int x=10/0;}
+    catch(Exception e){
+       System.out.println("Hi");
+    }
+    catch(Exception e){
+       System.out.println("Hello");
+    }
+  }
+}
+ 
+
+[2.0 points]
+
+ 
+ ans: Runtime Exception
+ 
+6.
+
+In which class the toString() method is present?
+
+[1.0 points]
+
+ ans: Object
+
+7.
+
+What is the output?
+
+public class Demo{ 
+    public static void main(String[] arr){ 
+      System.out.println("SIT"); 
+    } 
+    public static void main(String arr){ 
+      System.out.println("TIS"); 
+    } 
+}
+ 
+
+[1.0 points]
+
+ ans: SIT
+ 
+8.
+
+What will be the output?
+
+public class A
+{
+       public static void main(String[] args)
+        {
+            System.out.println('a' + 'a' + 'a' + 'a');
+        }
+}
+[1.0 points]
+
+ ans: 388
+ 
+
+9.
+
+What will be the output?
+
+class Test {     
+   public static void main(String[] args)     
+   {         
+       if (true)            
+         break;     
+   } 
+}
+ 
+
+[1.0 points]
+
+ ans: Compile Time Error
+ 
+10.
+
+What will be the outcome of the program?
+
+class Test
+{
+    public static void main(String[] args){
+       print(1,2);
+       print(1,2,3,4);
+   }
+   public static void print(int... x){
+        System.out.println("Hi");   
+   }
+   public static void print(int x, int y){
+       System.out.println("Hello");
+   }
+   
+}
+ 
+
+[1.0 points]
+
+
+ Ans: Hello Hi
+ 
